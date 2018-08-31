@@ -8,12 +8,17 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import {
+    PolymerElement,
+    html
+} from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 
+import '@polymer/iron-image/iron-image.js';
+
 class MyView1 extends PolymerElement {
-  static get template() {
-    return html`
+    static get template() {
+        return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -24,12 +29,13 @@ class MyView1 extends PolymerElement {
 
       <div class="card">
         <div class="circle">1</div>
-        <h1>View One</h1>
+        <h1>Soul of Man</h1>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
         <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+        <iron-image src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"></iron-image>
       </div>
     `;
-  }
+    }
 }
 
 window.customElements.define('my-view1', MyView1);
